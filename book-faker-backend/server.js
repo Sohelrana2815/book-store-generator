@@ -1,14 +1,17 @@
 const express = require("express");
 const cors = require("cors");
-const bookRoutes = require("./routes/books");
+const bookController = require("./controllers/bookController");
 
 const app = express();
-app.use(cors()); // CORS এনাবল করুন
 
-// API রাউট কানেক্ট করুন
-app.use("/api/books", bookRoutes);
+// Middleware
+app.use(cors());
+app.use(express.json());
 
-const PORT = 5000;
+// Routes
+app.get("/api/books", bookController.getBooks);
+
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
