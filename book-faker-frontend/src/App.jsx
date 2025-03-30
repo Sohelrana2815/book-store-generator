@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import "./App.css";
 import axiosPublic from "./services/axiosPublic";
+import BookList from "./components/BookList";
 function App() {
   const [books, setBooks] = useState([]);
   const [seed, setSeed] = useState(42);
@@ -20,7 +20,10 @@ function App() {
 
   return (
     <>
-      <h1></h1>
+      <div className="p-8">
+        <h1 className="text-2xl mb-4">Book Store Generator</h1>
+        <BookList books={books} />
+      </div>
     </>
   );
 }
