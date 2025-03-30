@@ -1,28 +1,19 @@
 import { useState, useEffect } from "react";
-import axiosPublic from "./services/axiosPublic";
-import BookList from "./components/BookList";
+import { useBooks } from "./hooks/useBooks";
 function App() {
-  const [books, setBooks] = useState([]);
-  const [seed, setSeed] = useState(42);
   const [locale, setLocale] = useState("en_US");
+  const [seed, setSeed] = useState(42);
+  const [avgLikes, setAvgLikes] = useState(3.7);
+  const [avgReviews, setAvgReviews] = useState(4.5);
+
+  
 
   // FETCH DATA FROM API
-
-  useEffect(() => {
-    const fetchBooks = async () => {
-      const response = await axiosPublic.get("/books", {
-        params: { seed, locale, startIndex: 0, count: 20 },
-      });
-      setBooks(response.data);
-    };
-    fetchBooks();
-  }, [seed, locale]);
 
   return (
     <>
       <div className="p-8">
         <h1 className="text-2xl mb-4">Book Store Generator</h1>
-        <BookList books={books} />
       </div>
     </>
   );
