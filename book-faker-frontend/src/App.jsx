@@ -1,8 +1,12 @@
+import { Toaster } from "react-hot-toast";
+import BookTable from "./components/BookTable";
+
 const App = () => {
   return (
-    <div>
-      <h1>Hello World!!</h1>
-    </div>
+    <>
+      <BookTable />
+      <Toaster />
+    </>
   );
 };
 
