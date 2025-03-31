@@ -59,7 +59,7 @@ const BookTable = () => {
   }
 
   return (
-    <div className="p-4 max-w-6xl mx-auto">
+    <div className="p-4 max-w-7xl mx-auto">
       <div className="mb-6 space-y-4">
         <div className="flex gap-4 flex-wrap">
           <div className="flex-1">
