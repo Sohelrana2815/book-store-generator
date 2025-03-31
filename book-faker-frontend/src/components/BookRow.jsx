@@ -33,7 +33,7 @@ const BookRow = ({ book, isExpanded, onExpand }) => {
                 {book.reviews.length > 0 && (
                   <div className="mt-4">
                     <h4 className="font-bold mb-2">
-                      <p>Likes: {book.likes}</p>
+                      <p>Likes: {book.lik}</p>
                       Reviews ({book.reviews.length})
                     </h4>
 

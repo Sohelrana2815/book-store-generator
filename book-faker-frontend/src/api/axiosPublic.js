@@ -2,7 +2,7 @@
 import axios from "axios";
 
 export const axiosPublic = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://book-store-generator-server.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
   },

@@ -130,7 +130,7 @@ const BookTable = () => {
       <table className="w-full border-collapse">
         <thead>
           <tr className="bg-gray-100">
-            <th className="p-3 text-left">Index</th>
+            <th className="p-3 text-left">#</th>
             <th className="p-3 text-left">ISBN</th>
             <th className="p-3 text-left">Title</th>
             <th className="p-3 text-left">Author(s)</th>
