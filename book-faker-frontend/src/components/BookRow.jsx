@@ -16,6 +16,7 @@ const BookRow = ({ book, isExpanded, onExpand }) => {
         <td className="p-3 font-medium">{book.title}</td>
         <td className="p-3">{book.authors.join(", ")}</td>
         <td className="p-3">{book.publisher}</td>
+        <td className="p-3">{book.likes}</td>
       </tr>
 
       {isExpanded && (
@@ -33,7 +34,7 @@ const BookRow = ({ book, isExpanded, onExpand }) => {
                 {book.reviews.length > 0 && (
                   <div className="mt-4">
                     <h4 className="font-bold mb-2">
-                      <p>Likes: {book.lik}</p>
+                      <p>Likes: {book.likes}</p>
                       Reviews ({book.reviews.length})
                     </h4>
 

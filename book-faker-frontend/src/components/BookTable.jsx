@@ -135,6 +135,7 @@ const BookTable = () => {
             <th className="p-3 text-left">Title</th>
             <th className="p-3 text-left">Author(s)</th>
             <th className="p-3 text-left">Publisher</th>
+            <th className="p-3 text-left">Likes</th>
           </tr>
         </thead>
 
